@@ -2,11 +2,10 @@ pipeline {
     agent any
 
     tools {
-        sonarQube 'SonarScanner'
+        sonarRunner 'SonarScanner'
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm
@@ -15,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building project...'
+                echo 'Building sample project...'
             }
         }
 
@@ -28,3 +27,4 @@ pipeline {
         }
     }
 }
+    
